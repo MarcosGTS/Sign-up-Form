@@ -8,13 +8,17 @@
     </head>
     <body>
 
-        <div>
+        <div class="banner">
+            <div class="logo">
+                <img src="./imgs/odin-lined.png" alt="logo">
+                <span>Odin</span>
+            </div>
         </div>
         
         <main>
-            <div>
+            <div  class="heading align-block">
                 <p>
-                    This is noa a real online sevice! You know you need something
+                    This is not a real online sevice! You know you need something
                     like this in your life to help you realize your deepest dreams.
                     Sign up now to get started.
                 </p>
@@ -27,7 +31,7 @@
                 <h3>Let's do this!</h3>
                 <ul>
                     <li>
-                        <label for="fname">Fist Name</label>
+                        <label for="fname">Fisrt Name</label>
                         <input type="text" name="fname" id="fname">
                     </li>
                     <li>
@@ -53,9 +57,11 @@
                 </ul>
             </form>
 
-            <button form="form" type="submit">Create Account</button>
-
-            <p>Alread have an account?<a href="#">Log in</a></p>
+            <div class="align-block" id="submit-section">
+                <button form="form" type="submit">Create Account</button>
+                <div>Alread have an account?<a href="#">Log in</a></div>
+            </div>
+            
         </main>
     </body>
 </html>
