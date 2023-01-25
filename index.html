@@ -48,7 +48,8 @@
                     </li>
                     <li>
                         <label for="pws">Password</label>
-                        <input type="password" name="pws">
+                        <input type="password" name="pws" id="pws">
+                        <div id="pws-msg" class="error-msg"></div>
                     </li>
                     <li>
                         <label for="cpws">Confirm Password</label>
@@ -62,6 +63,29 @@
                 <div>Alread have an account?<a href="#">Log in</a></div>
             </div>
             
+            <script>
+                const password = document.querySelector("#pws");
+                const confirmPassword = document.querySelector("#cpws");
+                const passwordMsg = document.querySelector("#pws-msg");
+
+                password.addEventListener("input", checkPasswords);
+                confirmPassword.addEventListener("input", checkPasswords)
+                
+                function checkPasswords() {
+                    if (!(password.value == confirmPassword.value)) {
+                        console.log('check')
+                        password.setCustomValidity("Passwords must match");
+                        confirmPassword.setCustomValidity("Passwords must match");
+
+                        passwordMsg.innerText = "*Passwords must match";
+                    } else {
+                        password.setCustomValidity("");
+                        confirmPassword.setCustomValidity("");
+                        passwordMsg.innerText = "";
+                    }
+                }
+
+            </script>
         </main>
     </body>
 </html>
